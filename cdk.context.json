@@ -1,0 +1,8 @@
+{
+  "availability-zones:account=107161814468:region=ap-southeast-2": [
+    "ap-southeast-2a",
+    "ap-southeast-2b",
+    "ap-southeast-2c"
+  ],
+  "ami:account=107161814468:filters.image-type.0=machine:filters.name.0=ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20200924:filters.state.0=available:region=ap-southeast-2": "ami-06a532d102dd419f8"
+}
