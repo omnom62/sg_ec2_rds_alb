@@ -16,10 +16,6 @@ jobs:
       with:
         python-version:  3.9
 
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v1
-       # https://github.com/docker/setup-buildx-action
-
     - name:  Configure AWS credentials
       uses:  aws-actions/configure-aws-credentials@v1    
       with:
