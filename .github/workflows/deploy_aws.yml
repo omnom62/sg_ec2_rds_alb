@@ -31,7 +31,7 @@ jobs:
             ${{ runner.OS }}-
       - name: Install CDK
         run: |
-          npm install -g aws-cdk@1.62.0
+          npm install -g aws-cdk
       # - name: Configure AWS credentials
       #   uses: aws-actions/configure-aws-credentials@v1
       #   with:
