@@ -42,7 +42,7 @@ jobs:
       - name: Synth CDK
         uses: youyo/aws-cdk-github-actions@v2
         with:
-          subcommand: 'synth'
+          cdk_subcommand: 'synth'
           # cdk synth -region ${{ secrets.AWS_REGION }} -targetAccount ${{ secrets.AWS_TARGET_ACCOUNT }}' --output build/cdk.out
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
