@@ -40,10 +40,10 @@ jobs:
 
       - name: Deploy CDK
         run: |
-          cdk deploy --all --require-approval never
+          cdk deploy cdk_vpc --require-approval never
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          AWS_TARGET_ACCOUNT: ${{ secrets.AWS_TARGET_ACCOUNT }}
+          CDK_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+          CDK_DEFAULT_ACCOUNT: ${{ secrets.AWS_TARGET_ACCOUNT }}
 
