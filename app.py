@@ -12,8 +12,12 @@ app = core.App()
 
 #env = core.Environment(account="107161814468", region="ap-southeast-2")
 
-vpc_stack = SG_VPC(app, "cdk-vpc", env=env)
-ec2_stack = SG_EC2(app, "cdk-ec2", env=env, vpc=vpc_stack.vpc)
-rds_stack = SG_RDS(app, "cdk-rds", env=env, vpc=vpc_stack.vpc)
+# vpc_stack = SG_VPC(app, "cdk-vpc", env=env)
+# ec2_stack = SG_EC2(app, "cdk-ec2", env=env, vpc=vpc_stack.vpc)
+# rds_stack = SG_RDS(app, "cdk-rds", env=env, vpc=vpc_stack.vpc)
+
+vpc_stack = SG_VPC(app, "cdk-vpc")
+ec2_stack = SG_EC2(app, "cdk-ec2", vpc=vpc_stack.vpc)
+rds_stack = SG_RDS(app, "cdk-rds", vpc=vpc_stack.vpc)
 
 app.synth()
