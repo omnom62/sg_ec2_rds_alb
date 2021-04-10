@@ -39,6 +39,9 @@ jobs:
           aws-secret-access-key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region:  ap-southeast-2
 
+      - name: Set ENV variables
+        run: for v in `cat env` ; do echo "::set-env name=${v%%=*}::${v##*=}" ; done
+
       - name: Synth CDK
         run: |
           cdk synth
