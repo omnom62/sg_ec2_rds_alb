@@ -16,11 +16,11 @@ class SG_VPC(core.Stack):
                            nat_gateways=0,
                            subnet_configuration=[ec2.SubnetConfiguration(
                                subnet_type=ec2.SubnetType.PUBLIC,
-                               name="FrontEnd",
+                               name="sg-pubnet",
                                cidr_mask=24
                            ), ec2.SubnetConfiguration(
                                subnet_type=ec2.SubnetType.ISOLATED,
-                               name="DB-Tier",
+                               name="sg-privnet",
                                cidr_mask=24
                            )
                            ]
