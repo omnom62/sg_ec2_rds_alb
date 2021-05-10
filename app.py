@@ -17,3 +17,4 @@ ec2_stack = SG_EC2(app, "cdk-ec2", env=env, vpc=vpc_stack.vpc)
 rds_stack = SG_RDS(app, "cdk-rds", env=env, vpc=vpc_stack.vpc)
 
 app.synth()
+# test
